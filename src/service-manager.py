@@ -19,8 +19,6 @@ from gi.repository import Gtk
 from servicemanager.mainwindow import MainWindow
 
 
-
-
 if __name__ == "__main__":
     app = MainWindow()
     app.run(sys.argv)

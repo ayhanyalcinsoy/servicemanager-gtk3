@@ -33,7 +33,6 @@ class ServiceItem(Gtk.ListBox):
         Gtk.ListBoxRow.__init__(self, parent)
 
         self.package = package
-        self.listServices(listServices)
 
 class ServiceItemWidget(Gtk.ListBox):
 
@@ -179,9 +178,9 @@ class ServiceItemInfo(Gtk.Dialog):
 
 '''
 builder = Gtk.Builder()
-builder.add_from_file("item.glade")
+builder.add_from_file("servicemanager/item.glade")
 builder.connect_signals(Handler())
-window = builder.get_object("ServiceList")
+window = builder.get_object("listServices")
 #window.connect("destroy", Gtk.main_quit)
 #window.show_all()
-Gtk.main()
+#Gtk.main()

@@ -38,8 +38,6 @@ class MainWindow(Gtk.Application):
         self.lineSearch.textChanged[str].connect(self.doSearch)
         self.filterBox.currentIndexChanged[int].connect(self.filterServices)
 
-    builder = Gtk.Builder()
-    builder.add_from_file("servicemanager/main.glade")
     def doSearch(self, text):
         for service in self.services:
             if service.find(text) >= 0 or str(self.widgets[service].desc).lower().find(str(text).lower()) >= 0:
@@ -139,9 +137,6 @@ class MainWindow(Gtk.Application):
     def on_quit(self, exit):
         Gtk.main_quit()
 
-    builder = Gtk.Builder()
-    builder.add_from_file("servicemanager/main.glade")
-
 class Handler:
     def on_about(self, about):
         about_dialog = AboutDialog()
@@ -158,4 +153,4 @@ builder.connect_signals(Handler())
 window = builder.get_object("MainWindow")
 window.connect("destroy", Gtk.main_quit)
 window.show_all()
-#Gtk.main()
+Gtk.main()

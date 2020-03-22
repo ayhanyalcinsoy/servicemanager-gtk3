@@ -10,6 +10,7 @@ from backend import ServiceIface
 from about import AboutDialog
 from widgets import ServiceItem, ServiceItemWidget
 
+
 class MainWindow(Gtk.Application):
     def __init__(self, *args, **kwargs):
         Gtk.Application.__init__(self)
@@ -23,7 +24,7 @@ class MainWindow(Gtk.Application):
         self.services.sort()
 
         for service in self.services:
-            item = ServiceItem(service, listServices)
+            item = ServiceItem(service, self.listServices)
             item.setFlags(Gtk.NoItemFlags | Gtk.ItemIsEnabled)
             item.setSizeHint(Gtk.size(38, 48))
             self.widgets[service] = ServiceItemWidget(service, self, item)
@@ -148,9 +149,10 @@ class Handler:
 
 
 builder = Gtk.Builder()
-builder.add_from_file("servicemanager/main.glade")
+builder.add_from_file("../ui/main.ui")
 builder.connect_signals(Handler())
 window = builder.get_object("MainWindow")
+window.set_icon_from_file("../data/flag-yellow.png")
 window.connect("destroy", Gtk.main_quit)
 window.show_all()
 Gtk.main()

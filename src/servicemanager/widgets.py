@@ -27,7 +27,9 @@ import locale
 import sys
 import pisi
 
-class ServiceItem(Gtk.ListBox):
+#from servicemanager.item import listServices
+
+class ServiceItem(Gtk.ListBoxRow):
 
     def __init__(self, package, parent):
         Gtk.ListBoxRow.__init__(self, parent)
@@ -38,6 +40,9 @@ class ServiceItemWidget(Gtk.ListBox):
 
     def __init__(self, package, parent, item):
         Gtk.ListBoxRow.__init__(self, None)
+
+        self.ui = listServices()
+        self.ui.SetupUi(self)
 
         self.serviceName.setText(package)
         self.service_on_of(self, toggle=False)
@@ -178,7 +183,7 @@ class ServiceItemInfo(Gtk.Dialog):
 
 '''
 builder = Gtk.Builder()
-builder.add_from_file("servicemanager/item.glade")
+builder.add_from_file("../ui/item.ui")
 builder.connect_signals(Handler())
 window = builder.get_object("listServices")
 #window.connect("destroy", Gtk.main_quit)

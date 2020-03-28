@@ -16,7 +16,7 @@ import sys
 import gi
 gi.require_version('Gtk','3.0')
 from gi.repository import Gtk
-from servicemanager.mainwindow import MainWindow
+from servicemanager.window import *
 
 
 if __name__ == "__main__":

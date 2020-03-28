@@ -20,5 +20,5 @@ class AboutDialog(Gtk.AboutDialog) :
         self.destroy()
 
 
-about_dialog = AboutDialog()
+#about_dialog = AboutDialog()
 #about_dialog.run()

@@ -25,10 +25,10 @@ class listServices(Gtk.Window):
         vbox_service.set_homogeneous(False)
         hbox.pack_start(vbox_service, True, True, 0)
 
-        serviceName = Gtk.Label("Service Name")
+        serviceName = Gtk.Label("Docker")
         vbox_service.pack_start(serviceName, True, True, 0)
 
-        serviceDesc = Gtk.Label("Service Description")
+        serviceDesc = Gtk.Label("Docker Yönetim Hizmeti")
         vbox_service.pack_start(serviceDesc, True, True, 0)
 
         vbox_space = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=1)

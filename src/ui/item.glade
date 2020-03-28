@@ -25,7 +25,7 @@
           <object class="GtkLabel" id="labelStatus">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Bayrak</property>
+            <property name="label" translatable="yes">Icon</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -42,7 +42,8 @@
               <object class="GtkLabel" id="serviceName">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Service Name</property>
+                <property name="label" translatable="yes">Docker</property>
+                <property name="xalign">0.05000000074505806</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
@@ -57,7 +58,7 @@
               <object class="GtkLabel" id="serviceDesc">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Service Description</property>
+                <property name="label" translatable="yes">Docker Yönetim Hizmeti</property>
                 <attributes>
                   <attribute name="style" value="italic"/>
                 </attributes>
